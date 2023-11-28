@@ -1,0 +1,36 @@
+programa {
+  funcao inicio() {
+    /**
+     * bra >= 18 permitido
+     * usa >= 21 permitido
+     * por = aceita qualquer coisa
+     */
+    escreva("=== inicio ===\n\n")
+    cadeia pais
+    inteiro idade
+    logico permitido
+    escreva("Country/país? (bra, usa, por)\n")
+    leia(pais)
+    se(pais=="bra" ou pais=="por"){
+      escreva("Idade: ")
+    }senao{
+      escreva("Age: ")
+    }
+    leia(idade)
+    se((pais=="bra" e idade>=18) ou (pais=="usa" e idade>=21) ou (pais=="por")){
+      permitido = verdadeiro
+    }senao{
+      permitido = falso
+    }
+    se(permitido e (pais=="por" ou pais=="bra")){
+      escreva("Permitido")
+    }senao se(permitido e pais=="usa"){
+      escreva("Allowed")
+    }senao se(nao permitido e pais=="usa"){
+      escreva("Not Allowed")
+    }senao se(nao permitido e (pais=="bra" ou pais=="por")){
+      escreva("Não Permitido")
+    }
+    escreva("\n\n=== fim ===")
+  }
+}
